@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    background-color: green;
+}
+
+#back {
+    position: absolute;
+    width: 100px;
+    left: 20px;
+    top: 20px;
+    border-radius: 10px;
+    z-index: 53;
+}
+
+.card {
+    border-radius: 10px;
+    position: absolute;
+    width: 100px;
+    left: 20px;
+    box-shadow: 4px 0px 5px 0px black;
+    top: 20px;
+    transition: 1s;
+}
+
+
+#counter {
+    position: absolute;
+    top: 600px;
+    left: 10px;
+    color: white;
+}
+
+#butt {
+    position: absolute;
+    left: 50px;
+    top: 450px;
+    width: 250px;
+    height: 50px;
+    border: 2px white solid;
+    border-radius: 10px;
+    background-color: crimson;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px 5px #111;
+}
+
+#butt:hover {
+    background-color: red;
+
+}
+
+.hand1, .hand2, .hand3, .hand4, .hand5, .hand6, .hand7,.hand8, .hand9, .hand11, .hand22, .hand33, .hand44,#back2 {
+    border-radius: 10px;
+    width: 100px;
+    box-shadow: 4px 0px 5px 0px black;
+    position: absolute;
+    top: 350px;
+    left: 70px;
+}
+
+.hand2 {
+    top: 20px;
+    left: 200px;
+}
+
+#back2 {
+    top: 20px;
+    left: 200px;
+    z-index: 2;
+    visibility: hidden;
+    
+}
+
+.hand3 {
+    top: 350px;
+    left: 120px;
+}
+
+.hand4 {
+    top: 20px;
+    left: 250px;
+}
+
+
+
+.hand5 {
+    top: 350px;
+    left: 170px;
+}
+
+.hand6 {
+    top: 350px;
+    left: 220px;
+}
+
+.hand7 {
+    top: 350px;
+    left: 270px;
+}
+
+.hand8 {
+    top: 350px;
+    left: 320px;
+}
+
+.hand9 {
+    top: 350px;
+    left: 370px;
+}
+
+
+.hand11 {
+    top: 20px;
+    left: 300px;
+}
+
+.hand22 {
+    top: 20px;
+    left: 350px;
+}
+
+.hand33 {
+    top: 20px;
+    left: 400px;
+}
+
+.hand44 {
+    top: 20px;
+    left: 450px;
+}
+
+
+
+
+
+.none {
+    display: none;
+}
+
+
+
+
+
+
+#myHand, #dealerHand {
+    color: white;
+    position: absolute;
+    padding: 20px;
+    width: 22px;
+    background-color: rgba(17, 17, 17, 0.445);
+    font-weight: 800;
+    font-size: larger;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+#myHand {
+    top: 250px;
+    left: 100px;
+}
+
+#dealerHand {
+    top: 160px;
+    left: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#check, #stay {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 540px;
+    border: 3px white solid;
+    background: rgb(0, 63, 0);
+    color: white;
+    font-size: larger;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+#check {
+    left: 50px;
+}
+
+#stay {
+    left: 200px;
+}
+
+
+#winlose {
+    position: absolute;
+    top: 215px;
+    left: 150px;
+    color: white;
+}

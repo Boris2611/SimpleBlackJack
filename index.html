@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple BlackJack</title>
+</head>
+<body>
+
+    
+
+    <button id="butt" onclick="shuffle()">Start</button>
+
+
+    
+    <div id="cards">
+        <img class="card" id="card1" src="cards/fronts/clubs_1.svg">
+        <img class="card" id="card2" src="cards/fronts/clubs_2.svg">
+        <img class="card" id="card3" src="cards/fronts/clubs_3.svg">
+        <img class="card" id="card4" src="cards/fronts/clubs_4.svg">
+        <img class="card" id="card5" src="cards/fronts/clubs_5.svg">
+        <img class="card" id="card6" src="cards/fronts/clubs_6.svg">
+        <img class="card" id="card7" src="cards/fronts/clubs_7.svg">
+        <img class="card" id="card8" src="cards/fronts/clubs_8.svg">
+        <img class="card" id="card9" src="cards/fronts/clubs_9.svg">
+        <img class="card" id="card10" src="cards/fronts/clubs_10.svg">
+        <img class="card" id="card11" src="cards/fronts/clubs_12.svg">
+        <img class="card" id="card12" src="cards/fronts/clubs_13.svg">
+        <img class="card" id="card13" src="cards/fronts/clubs_14.svg">
+        <img class="card" id="card14" src="cards/fronts/diamonds_1.svg">
+        <img class="card" id="card15" src="cards/fronts/diamonds_2.svg">
+        <img class="card" id="card16" src="cards/fronts/diamonds_3.svg">
+        <img class="card" id="card17" src="cards/fronts/diamonds_4.svg">
+        <img class="card" id="card18" src="cards/fronts/diamonds_5.svg">
+        <img class="card" id="card19" src="cards/fronts/diamonds_6.svg">
+        <img class="card" id="card20" src="cards/fronts/diamonds_7.svg">
+        <img class="card" id="card21" src="cards/fronts/diamonds_8.svg">
+        <img class="card" id="card22" src="cards/fronts/diamonds_9.svg">
+        <img class="card" id="card23" src="cards/fronts/diamonds_10.svg">
+        <img class="card" id="card24" src="cards/fronts/diamonds_12.svg">
+        <img class="card" id="card25" src="cards/fronts/diamonds_13.svg">
+        <img class="card" id="card26" src="cards/fronts/diamonds_14.svg">
+        <img class="card" id="card27" src="cards/fronts/hearts_1.svg">
+        <img class="card" id="card28" src="cards/fronts/hearts_2.svg">
+        <img class="card" id="card29" src="cards/fronts/hearts_3.svg">
+        <img class="card" id="card30" src="cards/fronts/hearts_4.svg">
+        <img class="card" id="card31" src="cards/fronts/hearts_5.svg">
+        <img class="card" id="card32" src="cards/fronts/hearts_6.svg">
+        <img class="card" id="card33" src="cards/fronts/hearts_7.svg">
+        <img class="card" id="card34" src="cards/fronts/hearts_8.svg">
+        <img class="card" id="card35" src="cards/fronts/hearts_9.svg">
+        <img class="card" id="card36" src="cards/fronts/hearts_10.svg">
+        <img class="card" id="card37" src="cards/fronts/hearts_12.svg">
+        <img class="card" id="card38" src="cards/fronts/hearts_13.svg">
+        <img class="card" id="card39" src="cards/fronts/hearts_14.svg">
+        <img class="card" id="card40" src="cards/fronts/spades_1.svg">
+        <img class="card" id="card41" src="cards/fronts/spades_2.svg">
+        <img class="card" id="card42" src="cards/fronts/spades_3.svg">
+        <img class="card" id="card43" src="cards/fronts/spades_4.svg">
+        <img class="card" id="card44" src="cards/fronts/spades_5.svg">
+        <img class="card" id="card45" src="cards/fronts/spades_6.svg">
+        <img class="card" id="card46" src="cards/fronts/spades_7.svg">
+        <img class="card" id="card47" src="cards/fronts/spades_8.svg">
+        <img class="card" id="card48" src="cards/fronts/spades_9.svg">
+        <img class="card" id="card49" src="cards/fronts/spades_10.svg">
+        <img class="card" id="card50" src="cards/fronts/spades_12.svg">
+        <img class="card" id="card51" src="cards/fronts/spades_13.svg">
+        <img class="card" id="card52" src="cards/fronts/spades_14.svg">
+        <img id="back2" src="cards/backs/red.svg">
+    </div>
+    
+    <div id="backs">
+        <img id="back" src="cards/backs/red.svg">
+    </div>
+
+    <h1 id="winlose"></h1>
+
+    <p id="counter">Simple BlackJack</p>
+
+    <p id="myHand">?</p>
+    <p id="dealerHand">?</p>
+
+    <button id="check" onclick="check()">Check</button>
+    <button id="stay" onclick="showHidden()">Stay</button>
+
+    <script src="main.js"></script>
+</body>
+</html>
