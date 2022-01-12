@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: green;
+    background-image: url("bg.jpg");
 }
 
 #back {
@@ -24,7 +24,7 @@ body {
 
 #counter {
     position: absolute;
-    top: 600px;
+    top: 700px;
     left: 10px;
     color: white;
 }
@@ -54,7 +54,7 @@ body {
     box-shadow: 4px 0px 5px 0px black;
     position: absolute;
     top: 350px;
-    left: 70px;
+    left: 20px;
 }
 
 .hand2 {
@@ -72,7 +72,7 @@ body {
 
 .hand3 {
     top: 350px;
-    left: 120px;
+    left: 70px;
 }
 
 .hand4 {
@@ -84,17 +84,17 @@ body {
 
 .hand5 {
     top: 350px;
-    left: 170px;
+    left: 120px;
 }
 
 .hand6 {
     top: 350px;
-    left: 220px;
+    left: 190px;
 }
 
 .hand7 {
     top: 350px;
-    left: 270px;
+    left: 250px;
 }
 
 .hand8 {
@@ -155,7 +155,7 @@ body {
 
 #myHand {
     top: 250px;
-    left: 100px;
+    left: 50px;
 }
 
 #dealerHand {
@@ -198,15 +198,15 @@ body {
 
 #winlose {
     position: absolute;
-    top: 215px;
-    left: 150px;
+    top: 170px;
+    left: 20px;
     color: white;
 }
 
 
 #chip1, #chip2, #chip3, #chip4{
     position: absolute;
-    top: 520px;
+    top: 540px;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -239,16 +239,37 @@ body {
     background-color: rgb(83, 0, 0);
 }
 
+#clear {
+    position: absolute;
+    top: 635px;
+    left: 100px;
+    width: 150px;
+    height: 50px;
+    background: rgb(63, 63, 230);
+    font-size: larger;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px #111;
+}
+
 #bet {
     position: absolute;
     color: white;
-    top: 380px;
-    left: 250px;
+    top: 500px;
+    left: 53px;
 }
 
 #money {
     position: absolute;
     color: white;
-    top: 400px;
-    left: 250px;
+    top: 500px;
+    left: 200px;
+}
+
+#advanced {
+    position: absolute;
+    top:750px;
+    left: 75px;
+    color: white;
 }

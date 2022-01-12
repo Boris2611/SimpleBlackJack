@@ -3,21 +3,25 @@
 //----------------------------------------------------
 
 const flipSound = new Audio("flip.mp3");
+const winSound = new Audio("win.wav");
+const loseSound = new Audio("lose.wav")
+const startSound = new Audio("start.wav")
+const chipSound = new Audio("chip.wav")
+
+let decks = 2;                   // Decks
+let cards = decks * 52;         //Cards
 
 let array = [];               //       List of all cards
 let flip;                    //        Interval
 let cardNum = 0;            //         Index in array
 let index = 0;             //          Z Index
-let counter = 52;         //           Counter To Show
-let counter2 = 52;       //            Real Counter
+let counter = cards;      //           Counter To Show
+let counter2 = cards;    //            Real Counter
 let classs;
 let turn = 1;
 
 let myHand = 0;           // SUM OF PLAYERS CARDS
 let dealerHand = 0;      //  SUM OF DEALERS CARDS
-
-let decks = 1;           // Decks
-let cards = decks * 52; //Cards
 
 let dealersTurn = 0;
 let playersTurn = 1;
@@ -52,9 +56,11 @@ for (i = 1; i < 53; i++) {
 // ----------  CALLING SHUFFLE / RESETING  -------
 
 const shuffle = () => {
+    startSound.play()
+
     if (turn == 1 || counter < 15) {
         cardNum = 0;                                                  //  Setting index to 0 (+1)
-        counter = 52;                                                //   Setting counter to 52 (-1)
+        counter = cards;                                                //   Setting counter to 52 (-1)
         shuffleArray(array)                                         //     Calling Shuffle Function
         for (let i = 1; i <= array.length; i++) {
             id = "card" + i;
@@ -71,8 +77,9 @@ const shuffle = () => {
     }
 
 
-    counter2 = 52;
+    counter2 = cards;
     document.getElementById("butt").style.visibility = "hidden"; 
+    document.getElementById("clear").style.visibility = "hidden"; 
     index = 0;                                                  //    Setting Z-Index back to 0 (+1)
     flip = setInterval(flipC,700)                              //      Flipping Card Time
 
@@ -115,10 +122,6 @@ function flipC() {
         document.getElementById(id).style.zIndex = index; //
         document.getElementById(id).style.visibility = "visible";   // Showing new cards after first shuffle
 
-
-        if (counter2 == 50) {
-            document.getElementById("back2").style.visibility = "visible";
-        }
 
         if (playersTurn == 1) {
              // -------- FIRST FOUR ---------------
@@ -242,6 +245,7 @@ let clear; // Clearing Table TimeOut
 // -------------  LOSE  -------------------------
 
 function lose() {
+    loseSound.play()
     clearButtons()
     clear = setTimeout(clearTable,2000)
     console.log("YOU LOST !!!")
@@ -253,6 +257,7 @@ function lose() {
 // -------------  WIN  --------------------------
 
 function win() {
+    winSound.play()
     clearButtons()
     money += chipSum * 2;
     clear = setTimeout(clearTable,2000)
@@ -296,6 +301,7 @@ function clearTable() {
     document.getElementById("winlose").innerHTML = "";
     document.getElementById("back2").style.visibility = "hidden";
     document.getElementById("butt").style.visibility = "visible";
+    document.getElementById("clear").style.visibility = "visible";
     document.getElementById("bet").innerHTML = '';
     
     for (var i = 0; i < played.length; i++) {
@@ -319,25 +325,36 @@ function clearTable() {
 // ---------------- MONEY SYSTEM -------------------------------
 
 function chip1() {
+    chipSound.play()
     chip = 1;
     chipSum += chip;
     document.getElementById("bet").innerHTML = "Bet: " + chipSum;
 }
 
 function chip2() {
+    chipSound.play()
     chip = 10;
     chipSum += chip;
     document.getElementById("bet").innerHTML = "Bet: " + chipSum;
 }
 
 function chip3() {
+    chipSound.play()
     chip = 50;
     chipSum += chip;
     document.getElementById("bet").innerHTML = "Bet: " + chipSum;
 }
 
 function chip4() {
+    chipSound.play()
     chip = 100;
     chipSum += chip;
     document.getElementById("bet").innerHTML = "Bet: " + chipSum;
+}
+
+function resetC() {
+    chipSum = 0;
+    chip = 0;
+    document.getElementById("bet").innerHTML = "Bet: " + chipSum;
+
 }
