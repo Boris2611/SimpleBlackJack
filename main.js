@@ -224,7 +224,7 @@ function stay() {
     clearTimeout(show)
     console.log("Dealer's Turn")
 
-    if (dealerHand <= 17 || dealerHand < myHand) {
+    if (dealerHand < myHand) {
         dealersTurn = 1;
         playersTurn = 0;
         // DELAR PLAYING
