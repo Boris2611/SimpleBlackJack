@@ -19,7 +19,6 @@ body {
     left: 20px;
     box-shadow: 4px 0px 5px 0px black;
     top: 20px;
-    transition: 1s;
 }
 
 
@@ -202,4 +201,54 @@ body {
     top: 215px;
     left: 150px;
     color: white;
+}
+
+
+#chip1, #chip2, #chip3, #chip4{
+    position: absolute;
+    top: 520px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 10px solid gray;
+    left: 20px;
+    font-size: larger;
+    color: white;
+}
+
+#chip1:hover, #chip2:hover, #chip3:hover, #chip4:hover {
+    border: 10px solid white;
+}
+
+#chip1 {
+    background-color: rgb(75, 75, 0);
+}
+
+#chip2 {
+    left: 100px;
+    background-color: rgb(32, 88, 0);
+}
+
+#chip3 {
+    left: 180px;
+    background-color: rgb(0, 0, 82);
+}
+
+#chip4 {
+    left: 260px;
+    background-color: rgb(83, 0, 0);
+}
+
+#bet {
+    position: absolute;
+    color: white;
+    top: 380px;
+    left: 250px;
+}
+
+#money {
+    position: absolute;
+    color: white;
+    top: 400px;
+    left: 250px;
 }

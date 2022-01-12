@@ -22,6 +22,10 @@ let cards = decks * 52; //Cards
 let dealersTurn = 0;
 let playersTurn = 1;
 
+let money = 1000;
+let chip = 0;
+let chipSum = 0;
+
 
 // ------  GENERATING VALUES  -------------------
 
@@ -52,6 +56,18 @@ const shuffle = () => {
         cardNum = 0;                                                  //  Setting index to 0 (+1)
         counter = 52;                                                //   Setting counter to 52 (-1)
         shuffleArray(array)                                         //     Calling Shuffle Function
+        for (let i = 1; i <= array.length; i++) {
+            id = "card" + i;
+            document.getElementById(id).className = "";             // Puting Cards Back in deck
+            document.getElementById(id).className = "card";
+            console.log(id)
+        }
+        alert("Deck Shuffled")
+    }
+
+    for (let i = 1; i < 5; i++) {
+        id = "chip" + i;
+        document.getElementById(id).style.visibility = "hidden";
     }
 
 
@@ -59,6 +75,9 @@ const shuffle = () => {
     document.getElementById("butt").style.visibility = "hidden"; 
     index = 0;                                                  //    Setting Z-Index back to 0 (+1)
     flip = setInterval(flipC,700)                              //      Flipping Card Time
+
+    money = money - chipSum;
+    document.getElementById("money").innerHTML = "Money: " + money;
 };
 // -----------------------------------------------
 
@@ -88,12 +107,13 @@ function flipC() {
         counter -= 1;                    // Counting cards from 52 to 0 (-1)
         index += 1;                     //  Z Index
         id = "card" + array[cardNum];  //   Making ID
-        cardNum += 1;                //     Index (+1)
+        cardNum += 1;                 //     Index (+1)
 
         hand += 1;                                           // 4 starting Cards
         classs = "hand" + hand;                             //
         document.getElementById(id).className = classs;    //
         document.getElementById(id).style.zIndex = index; //
+        document.getElementById(id).style.visibility = "visible";   // Showing new cards after first shuffle
 
 
         if (counter2 == 50) {
@@ -226,6 +246,7 @@ function lose() {
     clear = setTimeout(clearTable,2000)
     console.log("YOU LOST !!!")
     document.getElementById("winlose").innerHTML = "LOSE";
+    chipSum = 0;
 }
 // ----------------------------------------------
 
@@ -233,18 +254,22 @@ function lose() {
 
 function win() {
     clearButtons()
+    money += chipSum * 2;
     clear = setTimeout(clearTable,2000)
     console.log("WIN")
-    document.getElementById("winlose").innerHTML = "WIN";
+    document.getElementById("winlose").innerHTML = "WIN: " + chipSum*2;
+    chipSum = 0;
 }
 // ----------------------------------------------
 
 // -------------  SPLIT  ------------------------
 function split() {
+    money += chipSum;
     clearButtons()
     clear = setTimeout(clearTable,2000)
     console.log("SPLIT")
-    document.getElementById("winlose").innerHTML = "SPLIT";
+    document.getElementById("winlose").innerHTML = "SPLIT: " + chipSum;
+    chipSum = 0;
 }
 // ----------------------------------------------
 
@@ -267,9 +292,11 @@ function clearTable() {
     hand = 0;
     hand2 = 0;
     
+    document.getElementById("money").innerHTML = "Money: " + money;
     document.getElementById("winlose").innerHTML = "";
     document.getElementById("back2").style.visibility = "hidden";
-    document.getElementById("butt").style.visibility = "visible"
+    document.getElementById("butt").style.visibility = "visible";
+    document.getElementById("bet").innerHTML = '';
     
     for (var i = 0; i < played.length; i++) {
         id = played[i];
@@ -280,55 +307,37 @@ function clearTable() {
         document.getElementById("myHand").style.visibility = "hidden";
         document.getElementById("dealerHand").style.visibility = "hidden";
     }
-}
 
-
-/* 
-
-
-function backC() {
-    counter += 1;
-    document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks;
-    cardNum -= 1;
-    index += 1;
-    
-    if (counter == 52) {
-        clearInterval(backInDeck)
-        document.getElementById("butt").style.visibility = "visible";
-        document.getElementById("back").style.visibility = "visible";
+    for (let i = 1; i < 5; i++) {
+        id = "chip" + i;
+        document.getElementById(id).style.visibility = "visible";
     }
-
-    id = "card" + array[cardNum];
-    console.log(id + " - Back")
-    document.getElementById(id).style.top = "20px";
-    document.getElementById(id).style.zIndex = index;
-
-    
-
 }
 
 
-function flipC() {
-        counter -= 1; 
-        document.getElementById("counter").innerHTML = "Cards Left: " + counter; // Cards Left
-        index += 1; // Z Index
-        flipSound.play()
-        id = "card" + array[cardNum];
-        console.log(id + " - Flipped")
-        cardNum += 1;
-        document.getElementById(id).style.top = "400px";
-        document.getElementById(id).style.zIndex = index;
 
-        if (counter == 0) {
-            clearInterval(flip);
-            cardNum = 52; // Just to remove first card
-            document.getElementById("back").style.visibility = "hidden";
-            setTimeout(function() {
-                backInDeck = setInterval(backC, 100)
-            }, 1000)
-            index = 0;
+// ---------------- MONEY SYSTEM -------------------------------
 
-        }
+function chip1() {
+    chip = 1;
+    chipSum += chip;
+    document.getElementById("bet").innerHTML = "Bet: " + chipSum;
 }
 
-*/
+function chip2() {
+    chip = 10;
+    chipSum += chip;
+    document.getElementById("bet").innerHTML = "Bet: " + chipSum;
+}
+
+function chip3() {
+    chip = 50;
+    chipSum += chip;
+    document.getElementById("bet").innerHTML = "Bet: " + chipSum;
+}
+
+function chip4() {
+    chip = 100;
+    chipSum += chip;
+    document.getElementById("bet").innerHTML = "Bet: " + chipSum;
+}
