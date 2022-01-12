@@ -31,6 +31,9 @@ let chip = 0;
 let chipSum = 0;
 
 
+
+
+
 // ------  GENERATING VALUES  -------------------
 
 let values = [0];
@@ -362,4 +365,51 @@ function resetC() {
     chip = 0;
     document.getElementById("bet").innerHTML = "Bet: " + chipSum;
 
+}
+
+
+
+function deck1() {
+    decks = 1;
+    cards = decks * 52;
+    turn = 0;
+    counter = cards;  
+    counter2 = cards; 
+    document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
+}
+
+function deck2() {
+    decks = 2;
+    cards = decks * 52;
+    turn = 0;
+    counter = cards;  
+    counter2 = cards; 
+    document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
+}
+
+function deck3() {
+    decks = 4;
+    cards = decks * 52;
+    turn = 0;
+    counter = cards;  
+    counter2 = cards; 
+    document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
+}
+
+function deck4() {
+    decks = 6;
+    cards = decks * 52;
+    turn = 0;
+    counter = cards;  
+    counter2 = cards; 
+    document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
+}
+
+function deck5() {
+    decks = 8;
+    cards = decks * 52;
+    turn = 0;
+    counter = cards;  
+    counter2 = cards; 
+    document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
 }

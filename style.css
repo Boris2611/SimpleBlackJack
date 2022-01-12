@@ -146,7 +146,7 @@ body {
     position: absolute;
     padding: 20px;
     width: 22px;
-    background-color: rgba(17, 17, 17, 0.445);
+    background-color: rgba(0, 0, 0, 0.322);
     font-weight: 800;
     font-size: larger;
     border-radius: 50%;
@@ -269,9 +269,50 @@ body {
     left: 200px;
 }
 
-#advanced {
+#advanced, #advanced2 {
     position: absolute;
     top:750px;
-    left: 75px;
+    left: 20px;
     color: white;
+}
+
+#advanced2 {
+    top: 820px;
+    left: 20px;
+}
+
+#deck1, #deck2, #deck3, #deck4, #deck5 {
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 900px;
+    left: 40px;
+    background-color: rgb(63, 63, 230);
+    font-size: larger;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px #111;
+}
+
+#deck2 {
+    left: 100px;
+}
+
+#deck3 {
+    left: 160px;
+}
+
+#deck4 {
+    left: 220px;
+}
+
+#deck5 {
+    left: 280px;
+}
+
+#footer {
+    position: absolute;
+    top: 950px;
+    color: white;
+    left: 75px;
 }
