@@ -206,7 +206,7 @@ body {
 
 #chip1, #chip2, #chip3, #chip4{
     position: absolute;
-    top: 540px;
+    top: 550px;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -214,10 +214,12 @@ body {
     left: 20px;
     font-size: larger;
     color: white;
+    box-shadow: 0px 0px 5px 5px #111;
 }
 
 #chip1:hover, #chip2:hover, #chip3:hover, #chip4:hover {
     border: 10px solid white;
+    
 }
 
 #chip1 {
