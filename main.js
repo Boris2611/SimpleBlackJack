@@ -123,6 +123,11 @@ function flipC() {
         document.getElementById(id).style.visibility = "visible";   // Showing new cards after first shuffle
 
 
+        if (counter2 == cards - 2) {
+            document.getElementById("back2").style.visibility = "visible";
+        }
+    
+
         if (playersTurn == 1) {
              // -------- FIRST FOUR ---------------
         if (counter2 == cards - 4) {
