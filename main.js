@@ -372,7 +372,7 @@ function resetC() {
 function deck1() {
     decks = 1;
     cards = decks * 52;
-    turn = 0;
+    turn = 1;
     counter = cards;  
     counter2 = cards; 
     document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
@@ -381,7 +381,7 @@ function deck1() {
 function deck2() {
     decks = 2;
     cards = decks * 52;
-    turn = 0;
+    turn = 1;
     counter = cards;  
     counter2 = cards; 
     document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
@@ -390,7 +390,7 @@ function deck2() {
 function deck3() {
     decks = 4;
     cards = decks * 52;
-    turn = 0;
+    turn = 1;
     counter = cards;  
     counter2 = cards; 
     document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
@@ -399,7 +399,7 @@ function deck3() {
 function deck4() {
     decks = 6;
     cards = decks * 52;
-    turn = 0;
+    turn = 1;
     counter = cards;  
     counter2 = cards; 
     document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
@@ -408,7 +408,7 @@ function deck4() {
 function deck5() {
     decks = 8;
     cards = decks * 52;
-    turn = 0;
+    turn = 1;
     counter = cards;  
     counter2 = cards; 
     document.getElementById("counter").innerHTML = "Cards Left: " + counter + " -- Decks: " + decks + " -- Turn: " + turn;
